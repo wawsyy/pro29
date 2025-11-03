@@ -77,5 +77,3 @@ If port 8545 is already in use, you can:
 - Make sure you've deployed the contract to the local network
 - Update the `NEXT_PUBLIC_CONTRACT_ADDRESS` environment variable
 - Restart the frontend development server after updating the address
-
-
