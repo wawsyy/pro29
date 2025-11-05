@@ -1,3 +1,4 @@
+// Auto-generated modification at 2025-11-28 11:52:24
 "use client";
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
