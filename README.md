@@ -11,19 +11,19 @@ This project implements a privacy-preserving inheritance rule verification syste
 - **Privacy-Preserving**: Age values are encrypted using FHE, never revealed on-chain
 - **Rule Verification**: Checks if encrypted age meets the requirement (>= 18)
 - **Encrypted Results**: Returns encrypted boolean results that only the user can decrypt
-- **Complete Flow**: Submit encrypted age → View encrypted result → Decrypt result
+- **Complete Flow**: Submit encrypted age �?View encrypted result �?Decrypt result
 
 ## Project Structure
 
 ```
 pro29/
 ├── contracts/
-│   └── InheritanceRuleCheck.sol  # Main contract for inheritance rule verification
+�?  └── InheritanceRuleCheck.sol  # Main contract for inheritance rule verification
 ├── deploy/
-│   └── deploy.ts                  # Deployment script
+�?  └── deploy.ts                  # Deployment script
 ├── test/
-│   ├── InheritanceRuleCheck.ts    # Local network tests
-│   └── InheritanceRuleCheckSepolia.ts  # Sepolia testnet tests
+�?  ├── InheritanceRuleCheck.ts    # Local network tests
+�?  └── InheritanceRuleCheckSepolia.ts  # Sepolia testnet tests
 ├── frontend/                      # Frontend application (to be set up)
 ├── hardhat.config.ts              # Hardhat configuration
 └── package.json                   # Dependencies
@@ -169,3 +169,7 @@ MIT
 - **Documentation**: [FHEVM Docs](https://docs.zama.ai)
 - **Community**: [Zama Discord](https://discord.gg/zama)
 
+
+
+## Auto-generated Section
+Added at 2025-11-28 11:52:25
