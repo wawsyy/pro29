@@ -1,3 +1,4 @@
+// Auto-generated modification at 2025-11-28 11:52:23
 "use client";
 
 import { useState, useCallback, useEffect, useMemo } from "react";
@@ -417,7 +418,7 @@ export function InheritanceCheckDemo() {
         {age && !fhevmInstance && (
           <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-[rgba(245,158,11,0.1)] to-[rgba(245,158,11,0.05)] border border-[rgba(245,158,11,0.2)]">
             <p className="text-sm text-[var(--warning)] font-medium">
-              ‚è≥ FHEVM is initializing... Please wait a moment before submitting.
+              ‚è?FHEVM is initializing... Please wait a moment before submitting.
             </p>
           </div>
         )}
@@ -430,7 +431,7 @@ export function InheritanceCheckDemo() {
         )}
         {fhevmError && (
           <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-[rgba(239,68,68,0.1)] to-[rgba(239,68,68,0.05)] border border-[rgba(239,68,68,0.2)]">
-            <p className="text-sm text-[var(--danger)] font-medium">‚ùå FHEVM Error: {fhevmError.message}</p>
+            <p className="text-sm text-[var(--danger)] font-medium">‚ù?FHEVM Error: {fhevmError.message}</p>
           </div>
         )}
       </div>
@@ -456,7 +457,7 @@ export function InheritanceCheckDemo() {
           {decryptedResult !== null && (
             <div className={`mt-6 p-6 rounded-xl ${decryptedResult ? "result-card result-eligible" : "result-card result-not-eligible"}`}>
               <p className={`text-2xl font-bold mb-3 ${decryptedResult ? "text-[var(--success)]" : "text-[var(--danger)]"}`}>
-                {decryptedResult ? "‚úì Eligible" : "‚úó Not Eligible"}
+                {decryptedResult ? "‚ú?Eligible" : "‚ú?Not Eligible"}
               </p>
               <p className="text-base text-[var(--text-secondary)]">
                 {decryptedResult
