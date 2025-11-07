@@ -1,3 +1,4 @@
+// Auto-generated modification at 2025-11-28 11:52:26
 import "@fhevm/hardhat-plugin";
 import "@nomicfoundation/hardhat-chai-matchers";
 import "@nomicfoundation/hardhat-ethers";
