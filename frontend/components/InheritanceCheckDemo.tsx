@@ -221,7 +221,8 @@ export function InheritanceCheckDemo() {
   // Handle transaction confirmation and refetch result
   useEffect(() => {
     if (isConfirmed && txHash) {
-      setMessage(`Transaction confirmed! Hash: ${txHash.slice(0, 10)}...`);
+      const hashString = typeof txHash === 'string' ? txHash : String(txHash);
+      setMessage(`Transaction confirmed! Hash: ${hashString.slice(0, 10)}...`);
       setIsSubmitting(false);
       // Refetch eligibility result after transaction is confirmed
       refetchEligibility();
@@ -252,7 +253,8 @@ export function InheritanceCheckDemo() {
     if (isWritePending && !txHash) {
       setMessage("Waiting for wallet confirmation... Please check your wallet popup.");
     } else if (isWritePending && txHash) {
-      setMessage(`Transaction submitted (${txHash.slice(0, 10)}...). Waiting for confirmation...`);
+      const hashString = typeof txHash === 'string' ? txHash : String(txHash);
+      setMessage(`Transaction submitted (${hashString.slice(0, 10)}...). Waiting for confirmation...`);
     }
   }, [isWritePending, txHash]);
 
