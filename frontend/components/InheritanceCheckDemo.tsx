@@ -226,7 +226,7 @@ export function InheritanceCheckDemo() {
       // Refetch eligibility result after transaction is confirmed
       refetchEligibility();
       setTimeout(() => {
-                {decryptedResult ? "鉁?Eligible" : "鉂?Not Eligible"}.");
+        setMessage("Check eligibility result below and decrypt to see if you're eligible.");
       }, 1000);
     }
   }, [isConfirmed, txHash, refetchEligibility]);
@@ -311,9 +311,9 @@ export function InheritanceCheckDemo() {
       );
 
       const decryptedValue = result[eligibilityHandle];
-                {decryptedResult ? "鉁?Eligible" : "鉂?Not Eligible"} = Boolean(decryptedValue);
-                {decryptedResult ? "鉁?Eligible" : "鉂?Not Eligible"});
-                {decryptedResult ? "鉁?Eligible" : "鉂?Not Eligible"} (age must be 18 or older)");
+      const isEligible = Boolean(decryptedValue);
+      setDecryptedResult(isEligible);
+      setMessage(isEligible ? "You are eligible for inheritance!" : "You are not yet eligible (age must be 18 or older)");
     } catch (error: any) {
       setMessage(`Decrypt error: ${error.message}`);
       console.error("Decrypt error:", error);
@@ -396,7 +396,7 @@ export function InheritanceCheckDemo() {
                 !age
                   ? "Please enter your age"
                   : !fhevmInstance
-              鈿狅笍 FHEVM is initializing... Please wait a moment before submitting.
+                  ? "FHEVM is initializing, please wait..."
                   : isWritePending
                   ? "Waiting for wallet confirmation..."
                   : isConfirming
