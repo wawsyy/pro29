@@ -1,6 +1,3 @@
-// Auto-generated modification at 2025-11-28 11:52:25
-// Auto-generated modification at 2025-11-28 11:52:25
-// Auto-generated modification at 2025-11-28 11:52:23
 "use client";
 
 import { useState, useCallback, useEffect, useMemo } from "react";
@@ -229,7 +226,7 @@ export function InheritanceCheckDemo() {
       // Refetch eligibility result after transaction is confirmed
       refetchEligibility();
       setTimeout(() => {
-        setMessage("Check eligibility result below and decrypt to see if you're eligible.");
+                {decryptedResult ? "鉁?Eligible" : "鉂?Not Eligible"}.");
       }, 1000);
     }
   }, [isConfirmed, txHash, refetchEligibility]);
@@ -314,9 +311,9 @@ export function InheritanceCheckDemo() {
       );
 
       const decryptedValue = result[eligibilityHandle];
-      const isEligible = Boolean(decryptedValue);
-      setDecryptedResult(isEligible);
-      setMessage(isEligible ? "You are eligible for inheritance!" : "You are not yet eligible (age must be 18 or older)");
+                {decryptedResult ? "鉁?Eligible" : "鉂?Not Eligible"} = Boolean(decryptedValue);
+                {decryptedResult ? "鉁?Eligible" : "鉂?Not Eligible"});
+                {decryptedResult ? "鉁?Eligible" : "鉂?Not Eligible"} (age must be 18 or older)");
     } catch (error: any) {
       setMessage(`Decrypt error: ${error.message}`);
       console.error("Decrypt error:", error);
@@ -399,7 +396,7 @@ export function InheritanceCheckDemo() {
                 !age
                   ? "Please enter your age"
                   : !fhevmInstance
-                  ? "FHEVM is initializing, please wait..."
+              鈿狅笍 FHEVM is initializing... Please wait a moment before submitting.
                   : isWritePending
                   ? "Waiting for wallet confirmation..."
                   : isConfirming
@@ -420,20 +417,20 @@ export function InheritanceCheckDemo() {
         {age && !fhevmInstance && (
           <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-[rgba(245,158,11,0.1)] to-[rgba(245,158,11,0.05)] border border-[rgba(245,158,11,0.2)]">
             <p className="text-sm text-[var(--warning)] font-medium">
-              �?FHEVM is initializing... Please wait a moment before submitting.
+              FHEVM is initializing... Please wait a moment before submitting.
             </p>
           </div>
         )}
         {fhevmInstance && fhevmStatus !== "ready" && (
           <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-[rgba(245,158,11,0.1)] to-[rgba(245,158,11,0.05)] border border-[rgba(245,158,11,0.2)]">
             <p className="text-sm text-[var(--warning)] font-medium">
-              ⚠️ FHEVM status: {fhevmStatus}. You can try submitting, but it may fail if not ready.
+               FHEVM status: {fhevmStatus}. You can try submitting, but it may fail if not ready.
             </p>
           </div>
         )}
         {fhevmError && (
           <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-[rgba(239,68,68,0.1)] to-[rgba(239,68,68,0.05)] border border-[rgba(239,68,68,0.2)]">
-            <p className="text-sm text-[var(--danger)] font-medium">�?FHEVM Error: {fhevmError.message}</p>
+            <p className="text-sm text-[var(--danger)] font-medium">FHEVM Error: {fhevmError.message}</p>
           </div>
         )}
       </div>
@@ -459,7 +456,7 @@ export function InheritanceCheckDemo() {
           {decryptedResult !== null && (
             <div className={`mt-6 p-6 rounded-xl ${decryptedResult ? "result-card result-eligible" : "result-card result-not-eligible"}`}>
               <p className={`text-2xl font-bold mb-3 ${decryptedResult ? "text-[var(--success)]" : "text-[var(--danger)]"}`}>
-                {decryptedResult ? "�?Eligible" : "�?Not Eligible"}
+                {decryptedResult ? "Eligible" : "Not Eligible"}
               </p>
               <p className="text-base text-[var(--text-secondary)]">
                 {decryptedResult
